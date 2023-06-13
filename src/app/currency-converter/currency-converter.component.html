@@ -1,0 +1,11 @@
+<div>
+  <input [(ngModel)]="amount" (input)="convertFrom()">
+  <select [(ngModel)]="fromCurrency" (change)="convertFrom()">
+    <option *ngFor="let currency of currencies" [value]="currency">{{currency}}</option>
+  </select>
+  =
+  <input [(ngModel)]="result" (input)="convertTo()">
+  <select [(ngModel)]="toCurrency" (change)="convertFrom()">
+    <option *ngFor="let currency of currencies" [value]="currency">{{currency}}</option>
+  </select>
+</div>
